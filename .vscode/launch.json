@@ -53,6 +53,59 @@
                 "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
                 "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zproj\"}"
             }
+        },
+        {
+            "name": "Start zranui",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/zranui",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#zranui-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zranui\"}"
+            }
+        },
+        {
+            "name": "Start zranui Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/zranui",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#zranui-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zranui\"}"
+            }
         }
     ]
 }
